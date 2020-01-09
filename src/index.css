@@ -1,14 +1,25 @@
 :root {
-  --calculator-background-color: #696969;
+  --display-background-color: #1d1f1f;
+
+  --calculator-background-color: rgb(46, 49, 49);
 
   --main-font: 'Orbitron', sans-serif;
 
+  --display-text-color: rgb(0,153,204);
+  --display-text-size: 4em;
+  --display-text-weight: 400;
+
   --calculator-height: 72%;
   --calculator-width: 36%;
+
+  --display-height: 24%;
+  --display-width: 92%;
 }
 
 @media screen and (max-width: 1024px) {
   :root {
+    --display-text-size: 10em;
+    
     --calculator-height: 100%;
     --calculator-width: 100%;
   }
