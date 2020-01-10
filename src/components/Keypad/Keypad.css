@@ -3,8 +3,8 @@
   flex-direction: row;
   flex-wrap: wrap;
   height: var(--keypad-height);
-  padding: 2%;
   width: var(--keypad-width);
+  padding: 2%;
 }
 
 .numbers-container {
