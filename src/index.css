@@ -1,13 +1,25 @@
 :root {
-  --display-background-color: rgba(165, 55, 253, 0.2);
+  --action-key-color: rgb(199, 236, 238);
+  --action-key-color-hover: rgb(104, 109, 224);
 
+  --display-background-color: rgba(165, 55, 253, 0.2);
   --calculator-background-color: rgb(46, 49, 49);
+
+  --number-key-color: rgb(186, 220, 88);
+  --number-key-color-hover: rgb(106, 176, 76);
+  --submit-key-color: rgb(34, 166, 179);
+  --submit-key-color-hover: rgb(72, 52, 212);
 
   --main-font: 'Orbitron', sans-serif;
 
-  --display-text-color: rgb(0,153,204);
+  --display-text-color: rgba(186, 220, 88, 0.7);
+  --key-text-color: rgba(46, 49, 49, 0.7);
+
   --display-text-size: 4em;
+  --key-text-size: 3em;
+
   --display-text-weight: 400;
+  --key-text-weight: 700;
 
   --calculator-height: 72%;
   --calculator-width: 36%;
@@ -22,6 +34,7 @@
 @media screen and (max-width: 1024px) {
   :root {
     --display-text-size: 10em;
+    --key-text-size: 6em;
     
     --calculator-height: 100%;
     --calculator-width: 100%;

@@ -5,15 +5,10 @@ import './Calculator.css';
 
 class Calculator extends Component {
   state = {
-    // value to be displayed in <Display />
     displayValue: '0',
-    // values to be displayed in number <Keys />
-    numbers: [],
-    // values to be displayed in operator <Keys />
-    operators: [],
-    // operator selected for math operation
+    numbers: ['9', '8', '7', '6', '5', '4', '3', '2', '1', '.', '0','ce'],
+    operators: ['/', 'x', '-', '+'],
     selectedOperator: '',
-    // stored value to use for math operation
     storedValue: '',
   }
 
@@ -25,8 +20,18 @@ class Calculator extends Component {
     console.log('set operation');
   }
 
-  updateDisplay = () => {
-    console.log('update display');
+  updateDisplay = value => {
+    let { displayValue } = this.state;
+    if (value === '.' && displayValue.includes('.')) value = '';
+
+    if (value === 'ce') {
+      displayValue = displayValue.substr(0, displayValue.length - 1);
+      if (displayValue === '') displayValue = '0';
+    } else {
+      displayValue === '0' ? displayValue = value : displayValue += value;
+    }
+
+    this.setState({ displayValue });
   }
 
   render = () => {
